@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Lab4-OOP-Paint-Final">
+  <ClassDiagramComponents>
+    <Class name="Controller" package="controller" visibility="public" xPosition="28.0" yPosition="648.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ShapeFactory" package="Factory" visibility="public" xPosition="369.0" yPosition="58.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createShape" returnType="MyShape" visibility="public" isStatic="true">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyCircle" package="model" visibility="public" xPosition="65.0" yPosition="2095.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyEllipse" package="model" visibility="public" xPosition="437.0" yPosition="2086.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyLine" package="model" visibility="public" xPosition="838.0" yPosition="2086.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="setStart" returnType="void" visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+        </Method>
+        <Method name="setEnd" returnType="void" visibility="public">
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+        </Method>
+        <Method name="respondToResize" returnType="void" visibility="public">
+          <Argument type="Point" name="a"/>
+          <Argument type="Point" name="b"/>
+        </Method>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyRectangle" package="model" visibility="public" xPosition="1173.0" yPosition="2086.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyShape" package="model" visibility="public" isAbstract="true" xPosition="411.0" yPosition="372.0">
+      <Fields>
+        <Field name="color" type="Color" visibility="protected"/>
+        <Field name="x1" type="int" visibility="protected"/>
+        <Field name="width" type="int" visibility="package"/>
+        <Field name="height" type="int" visibility="package"/>
+        <Field name="fillColor" type="Color" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="type" type="String" visibility="package"/>
+        <Field name="x" type="int" visibility="package"/>
+        <Field name="y" type="int" visibility="package"/>
+        <Field name="Centerx" type="int" visibility="package"/>
+        <Field name="lineSize" type="int" visibility="protected"/>
+        <Field name="isFilled" type="boolean" visibility="protected"/>
+        <Field name="isSelected" type="boolean" visibility="protected"/>
+        <Field name="selectPointRadius" type="int" visibility="protected"/>
+        <Field name="initialize" type="boolean" visibility="package"/>
+        <Field name="points" type="ArrayList&lt;Point&gt;" visibility="protected"/>
+        <Field name="movePoints" type="ArrayList&lt;Point&gt;" visibility="protected"/>
+        <Field name="resizePoints" type="ArrayList&lt;Point&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="x3"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="y2"/>
+          <Argument type="int" name="y3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCenterx" returnType="int" visibility="public"/>
+        <Method name="getCentery" returnType="int" visibility="public"/>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="getColor" returnType="Color" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="setFillColor" returnType="void" visibility="public">
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="isOnLine" returnType="boolean" visibility="public">
+          <Argument type="Point" name="a"/>
+          <Argument type="Point" name="b"/>
+          <Argument type="Point" name="c"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="getFillColor" returnType="Color" visibility="public"/>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="isInitialized" returnType="boolean" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+        </Method>
+        <Method name="respondToMove" returnType="void" visibility="public">
+          <Argument type="Point" name="p1"/>
+          <Argument type="Point" name="p2"/>
+        </Method>
+        <Method name="getArea" returnType="int" visibility="public"/>
+        <Method name="respondToResize" returnType="void" visibility="public">
+          <Argument type="Point" name="a"/>
+          <Argument type="Point" name="b"/>
+        </Method>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+        <Method name="getX1" returnType="int" visibility="public"/>
+        <Method name="setX1" returnType="void" visibility="public">
+          <Argument type="int" name="x1"/>
+        </Method>
+        <Method name="getY1" returnType="int" visibility="public"/>
+        <Method name="setY1" returnType="void" visibility="public">
+          <Argument type="int" name="y1"/>
+        </Method>
+        <Method name="getX2" returnType="int" visibility="public"/>
+        <Method name="setX2" returnType="void" visibility="public">
+          <Argument type="int" name="x2"/>
+        </Method>
+        <Method name="getY2" returnType="int" visibility="public"/>
+        <Method name="setY2" returnType="void" visibility="public">
+          <Argument type="int" name="y2"/>
+        </Method>
+        <Method name="getXT1" returnType="int" visibility="public"/>
+        <Method name="getXT2" returnType="int" visibility="public"/>
+        <Method name="getXT3" returnType="int" visibility="public"/>
+        <Method name="getYT1" returnType="int" visibility="public"/>
+        <Method name="getYT2" returnType="int" visibility="public"/>
+        <Method name="getYT3" returnType="int" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="setwidth" returnType="void" visibility="public">
+          <Argument type="int" name="dis"/>
+        </Method>
+        <Method name="setheight" returnType="void" visibility="public">
+          <Argument type="int" name="dis"/>
+        </Method>
+        <Method name="getWidth" returnType="int" visibility="public"/>
+        <Method name="getHeight" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MySquare" package="model" visibility="public" xPosition="1508.0" yPosition="2086.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyTriangle" package="model" visibility="public" xPosition="1460.0" yPosition="1403.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="x3"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="y2"/>
+          <Argument type="int" name="y3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="respondToMove" returnType="void" visibility="public">
+          <Argument type="Point" name="p1"/>
+          <Argument type="Point" name="p2"/>
+        </Method>
+        <Method name="sign" returnType="float" visibility="package">
+          <Argument type="Point" name="p1"/>
+          <Argument type="Point" name="p2"/>
+          <Argument type="Point" name="p3"/>
+        </Method>
+        <Method name="PointInTriangle" returnType="boolean" visibility="package">
+          <Argument type="Point" name="pt"/>
+          <Argument type="Point" name="v1"/>
+          <Argument type="Point" name="v2"/>
+          <Argument type="Point" name="v3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+        </Method>
+        <Method name="respondToResize" returnType="void" visibility="public">
+          <Argument type="Point" name="a"/>
+          <Argument type="Point" name="b"/>
+        </Method>
+        <Method name="creation" returnType="boolean" visibility="public">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="public"/>
+        <Method name="deSelect" returnType="void" visibility="public"/>
+        <Method name="isSelected" returnType="boolean" visibility="public"/>
+        <Method name="isFilled" returnType="boolean" visibility="public"/>
+        <Method name="setFilled" returnType="void" visibility="public">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="public"/>
+        <Method name="setLineThickness" returnType="void" visibility="public">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="public">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="public">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="public"/>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="paintListener" package="observer" visibility="public" xPosition="28.0" yPosition="111.0">
+      <Fields>
+        <Field name="paint" type="MyPaint" visibility="private" isStatic="true"/>
+        <Field name="x1" type="int" visibility="package"/>
+        <Field name="type" type="String" visibility="package" isStatic="true"/>
+        <Field name="newColor" type="Color" visibility="package" isStatic="true"/>
+        <Field name="fillColor" type="Color" visibility="package" isStatic="true"/>
+        <Field name="distance1" type="int" visibility="package"/>
+        <Field name="clickCounter" type="int" visibility="package"/>
+        <Field name="method" type="String" visibility="package" isStatic="true"/>
+        <Field name="selectedShapeIndex" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setMethod" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="setFillColor" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="setColor" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="setType" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="e"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="e"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="e"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="e"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyJFrame" package="view" visibility="public" xPosition="1149.0" yPosition="34.0">
+      <Fields>
+        <Field name="method" type="String" visibility="package"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="changeColor" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="circleButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="copyButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="deleteButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="drawButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="ellipseButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="fillButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="jColorChooser1" type="javax.swing.JColorChooser" visibility="private"/>
+        <Field name="jToggleButton1" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="lineButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="moveButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="rectButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="redoBtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="resizeButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="squareButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="triButt" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="undoBtn" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="setShapesFalse" returnType="void" visibility="private"/>
+        <Method name="setMethodFalse" returnType="void" visibility="public"/>
+        <Method name="rectButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="lineButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="squareButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ellipseButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="circleButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="triButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="changeColorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="fillButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="drawButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="moveButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="deleteButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="undoBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="redoBtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="copyButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="resizeButtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyPaint" package="view" visibility="public" xPosition="808.0" yPosition="177.0">
+      <Fields>
+        <Field name="paint" type="MyPaint" visibility="private" isStatic="true"/>
+        <Field name="shapes" type="ArrayList&lt;MyShape&gt;" visibility="public" isStatic="true"/>
+        <Field name="Redo" type="Stack&lt;ArrayList&lt;MyShape&gt;&gt;" visibility="public" isStatic="true"/>
+        <Field name="Undo" type="Stack&lt;ArrayList&lt;MyShape&gt;&gt;" visibility="public" isStatic="true"/>
+        <Field name="history" type="Stack&lt;ArrayList&lt;MyShape&gt;&gt;" visibility="public" isStatic="true"/>
+        <Field name="tmpShapes" type="ArrayList&lt;MyShape&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="MyPaint" visibility="public" isStatic="true"/>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="unDo" returnType="void" visibility="public"/>
+        <Method name="reDo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ShapeInterface" package="model" visibility="public" xPosition="1028.0" yPosition="962.0">
+      <Methods>
+        <Method name="paint" returnType="void" visibility="package">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="package">
+          <Argument type="Point" name="p"/>
+        </Method>
+        <Method name="respondToMove" returnType="void" visibility="package">
+          <Argument type="Point" name="p1"/>
+          <Argument type="Point" name="p2"/>
+        </Method>
+        <Method name="respondToResize" returnType="void" visibility="package">
+          <Argument type="Point" name="newPoint"/>
+          <Argument type="Point" name="oldPoint"/>
+        </Method>
+        <Method name="creation" returnType="boolean" visibility="package">
+          <Argument type="Point" name="p"/>
+          <Argument type="boolean" name="clicked"/>
+        </Method>
+        <Method name="select" returnType="void" visibility="package"/>
+        <Method name="deSelect" returnType="void" visibility="package"/>
+        <Method name="isSelected" returnType="boolean" visibility="package"/>
+        <Method name="setColor" returnType="void" visibility="package">
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="getColor" returnType="Color" visibility="package"/>
+        <Method name="isFilled" returnType="boolean" visibility="package"/>
+        <Method name="setFilled" returnType="void" visibility="package">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getLineThickness" returnType="int" visibility="package"/>
+        <Method name="setLineThickness" returnType="void" visibility="package">
+          <Argument type="int" name="thickness"/>
+        </Method>
+        <Method name="isMovepoint" returnType="boolean" visibility="package">
+          <Argument type="Point" name="point"/>
+        </Method>
+        <Method name="isResizepoint" returnType="int" visibility="package">
+          <Argument type="Point" name="Point"/>
+        </Method>
+        <Method name="getMovePoint" returnType="Point" visibility="package"/>
+        <Method name="equals" returnType="boolean" visibility="package">
+          <Argument type="Object" name="a"/>
+        </Method>
+        <Method name="copy" returnType="ShapeInterface" visibility="public"/>
+        <Method name="intialized" returnType="boolean" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="model.MyEllipse" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="view.MyPaint" target="view.MyPaint" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Undo" source="view.MyPaint" target="model.MyShape" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Stack&lt;ArrayList&lt;MyShape&gt;&gt;"/>
+    <UseRelation source="model.MyShape" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="model.ShapeInterface" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="model.MyTriangle" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="model.MyRectangle" target="model.MyShape"/>
+    <HasRelation name="paint" source="view.MyPaint" target="view.MyPaint" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Redo" source="view.MyPaint" target="model.MyShape" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Stack&lt;ArrayList&lt;MyShape&gt;&gt;"/>
+    <IsRelation name="is" source="model.MyCircle" target="model.MyEllipse"/>
+    <IsRelation name="is" source="model.MyEllipse" target="model.MyShape"/>
+    <IsRelation name="is" source="model.MyLine" target="model.MyShape"/>
+    <IsRelation name="is" source="model.MyTriangle" target="model.MyShape"/>
+    <UseRelation source="model.MyLine" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="model.MyRectangle" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="model.MyCircle" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="shapes" source="view.MyPaint" target="model.MyShape" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;MyShape&gt;"/>
+    <HasRelation name="paint" source="observer.paintListener" target="view.MyPaint" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="model.MyShape" target="model.ShapeInterface"/>
+    <UseRelation source="model.MySquare" target="model.ShapeInterface" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="history" source="view.MyPaint" target="model.MyShape" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Stack&lt;ArrayList&lt;MyShape&gt;&gt;"/>
+    <HasRelation name="tmpShapes" source="view.MyPaint" target="model.MyShape" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;MyShape&gt;"/>
+    <UseRelation source="Factory.ShapeFactory" target="model.MyShape" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="model.MySquare" target="model.MyRectangle"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
